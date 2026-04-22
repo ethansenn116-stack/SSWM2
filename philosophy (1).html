@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Philosophy | Sage Stone Wealth Management</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="sswm-silver.css">
+<style>
+.phil-split { display: grid; grid-template-columns: 1fr 1fr; gap: 88px; align-items: start; }
+.phil-photo { position: sticky; top: calc(var(--nav-h) + 32px); border-radius: 1px; overflow: hidden; aspect-ratio: 4/5; background: var(--silver-pale); }
+.phil-photo img { width: 100%; height: 100%; object-fit: cover; }
+.phil-photo-caption { position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, rgba(0,0,0,0.7), transparent); padding: 32px 24px 20px; font-size: 11px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.55); }
+.phil-body { padding-top: 8px; }
+.phil-body .gold-rule { margin-bottom: 20px; }
+.phil-body h2 { font-family: var(--font-serif); font-size: clamp(28px, 2.8vw, 40px); font-weight: 500; line-height: 1.2; color: var(--ink); margin-top: 16px; margin-bottom: 28px; }
+.phil-body p { font-size: 16px; line-height: 1.85; color: var(--ink-mid); margin-bottom: 20px; }
+.phil-body p strong { color: var(--ink); font-weight: 600; }
+.stats-mini { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 36px 0; }
+.stats-mini-card { background: var(--silver-faint); border: 1px solid var(--silver-light); padding: 24px 20px; text-align: center; border-radius: 1px; }
+.stats-mini-card:hover { border-color: var(--gold); background: var(--gold-pale); transition: 0.2s; }
+.stats-mini-num { font-family: var(--font-serif); font-size: 34px; font-weight: 600; color: var(--charcoal); line-height: 1; margin-bottom: 6px; }
+.stats-mini-label { font-size: 10px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-light); }
+
+.concerns-section { background: var(--charcoal); }
+.concerns-header { text-align: center; margin-bottom: 64px; }
+.concerns-header h2 { font-family: var(--font-serif); font-size: clamp(28px, 3vw, 44px); font-weight: 500; color: var(--white); margin-top: 16px; }
+.concerns-header p { font-size: 16px; color: rgba(255,255,255,0.5); margin-top: 16px; max-width: 520px; margin-inline: auto; line-height: 1.75; }
+.concerns-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: rgba(255,255,255,0.06); }
+.concern-card { background: var(--charcoal-md); padding: 44px 36px; border-top: 2px solid transparent; transition: background 0.25s, border-color 0.25s; }
+.concern-card:hover { background: var(--charcoal-lt); border-top-color: var(--gold); }
+.concern-icon { margin-bottom: 20px; }
+.concern-icon svg { width: 26px; height: 26px; stroke: var(--gold); fill: none; stroke-width: 1.5; }
+.concern-card h3 { font-family: var(--font-serif); font-size: 20px; font-weight: 500; color: var(--white); margin-bottom: 12px; }
+.concern-card p { font-size: 14px; line-height: 1.8; color: rgba(255,255,255,0.48); }
+
+.principles { background: var(--silver-pale); }
+.principles-header { text-align: center; margin-bottom: 64px; }
+.principles-header h2 { font-family: var(--font-serif); font-size: clamp(28px, 3vw, 42px); font-weight: 500; color: var(--ink); margin-top: 16px; }
+.principles-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2px; background: var(--silver-light); }
+.principle-card { background: var(--white); padding: 44px 40px; display: grid; grid-template-columns: 48px 1fr; gap: 24px; align-items: start; }
+.principle-card:hover { background: var(--gold-pale); transition: 0.2s; }
+.principle-num { font-family: var(--font-serif); font-size: 36px; font-weight: 700; color: var(--silver-light); line-height: 1; }
+.principle-card h3 { font-family: var(--font-serif); font-size: 20px; font-weight: 500; color: var(--ink); margin-bottom: 10px; }
+.principle-card p { font-size: 14px; line-height: 1.8; color: var(--ink-mid); }
+</style>
+</head>
+<body>
+<nav id="main-nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo"><img src="https://static.wixstatic.com/media/12ea13_1bd8c24ed6064b38bd9b2aebd1a0d62a~mv2.png/v1/fill/w_532,h_176,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/SSWM%20Logo%202024%20KL%20horizontal%20A.png" alt="Sage Stone Wealth Management"></a>
+    <div class="nav-links">
+      <a href="philosophy.html" class="active">Our Philosophy</a>
+      <a href="services.html">Services</a>
+      <a href="team.html">The Team</a>
+      <a href="contact.html">Contact</a>
+      <a href="contact.html" class="nav-cta">Request a Consult</a>
+    </div>
+  </div>
+</nav>
+
+<div class="page-hero" data-screen-label="Page Hero">
+  <div class="container page-hero-inner">
+    <span class="eyebrow">Our Philosophy</span>
+    <h1>Investing Guided by<br><em>Values, Not Just Returns</em></h1>
+    <p>We were the first to publish academic research integrating faith and finance. That founding belief still drives every decision we make.</p>
+  </div>
+</div>
+
+<section class="section-pad" data-screen-label="Philosophy Body">
+  <div class="container">
+    <div class="phil-split">
+      <div class="phil-photo fade-up">
+        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=900&q=85" alt="La Jolla beach">
+        <div class="phil-photo-caption">La Jolla, California</div>
+      </div>
+      <div class="phil-body fade-up fade-up-d1">
+        <div class="eyebrow">Our Founding Belief</div>
+        <div class="gold-rule"></div>
+        <h2>You Shouldn't Have to Choose Between Profit and Principle</h2>
+        <p>For too long, investors were told that ethical investing meant accepting lower returns. We knew that wasn't true—and we set out to prove it.</p>
+        <p>In 2002, our founder Mary Naber published the first academic research integrating faith-based screening with investment portfolio construction, in the <strong>Journal of Investing.</strong> That research laid the foundation for everything Sage Stone is today.</p>
+        <div class="stats-mini">
+          <div class="stats-mini-card"><div class="stats-mini-num">22+</div><div class="stats-mini-label">Years of Experience</div></div>
+          <div class="stats-mini-card"><div class="stats-mini-num">10×</div><div class="stats-mini-label">Five Star Wealth Manager</div></div>
+          <div class="stats-mini-card"><div class="stats-mini-num">SEC</div><div class="stats-mini-label">Registered Investment Adviser</div></div>
+          <div class="stats-mini-card"><div class="stats-mini-num">1st</div><div class="stats-mini-label">Published Ethical Investing Research</div></div>
+        </div>
+        <p>We are not product salespeople. We are fiduciaries. That means your interests always come first, and our recommendations are always grounded in evidence, not commission.</p>
+        <a href="services.html" class="btn-dark" style="margin-top:20px;display:inline-block">View Our Services</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="concerns-section section-pad" data-screen-label="Client Concerns">
+  <div class="container">
+    <div class="concerns-header fade-up">
+      <div class="eyebrow">We Understand Your Concerns</div>
+      <h2>The Questions That Matter Most</h2>
+      <p>These are the real concerns we help our clients navigate every day.</p>
+    </div>
+    <div class="concerns-grid">
+      <div class="concern-card fade-up"><div class="concern-icon"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm.5 15H11v-6l5.25 3.15-.75 1.23-4.5-2.67V17h1.5zm0-10H11V5h1.5v2z"/></svg></div><h3>Will I Outlive My Money?</h3><p>We model your lifetime income with precision—ensuring your principal is structured to last, through any market cycle.</p></div>
+      <div class="concern-card fade-up fade-up-d1"><div class="concern-icon"><svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z"/></svg></div><h3>Can I Invest With My Values?</h3><p>Absolutely—and without sacrificing performance. Our ethical screening methodology is backed by 22 years of research and real client results.</p></div>
+      <div class="concern-card fade-up fade-up-d2"><div class="concern-icon"><svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H5.17L4 17.17V4h16v12z"/></svg></div><h3>Is My Advisor Responsive?</h3><p>We are. As a boutique firm, you always know who to call and we always answer.</p></div>
+      <div class="concern-card fade-up"><div class="concern-icon"><svg viewBox="0 0 24 24"><path d="M3.5 18.49l6-6.01 4 4L22 6.92l-1.41-1.41-7.09 7.97-4-4L2 16.99z"/></svg></div><h3>Is My Principal Protected?</h3><p>We take a conservative, evidence-based approach to risk. Your wealth is structured to weather downturns before chasing returns.</p></div>
+      <div class="concern-card fade-up fade-up-d1"><div class="concern-icon"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg></div><h3>Can I Maintain My Lifestyle?</h3><p>Our retirement planning ensures your income streams sustain the life you've built—and the legacy you want to leave.</p></div>
+      <div class="concern-card fade-up fade-up-d2"><div class="concern-icon"><svg viewBox="0 0 24 24"><path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z"/></svg></div><h3>Are Global Realities Considered?</h3><p>We integrate global macro trends into your plan so you're positioned to flourish—not just survive—market shifts.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="principles section-pad" data-screen-label="Principles">
+  <div class="container">
+    <div class="principles-header fade-up">
+      <div class="eyebrow">Our Principles</div>
+      <div class="gold-rule" style="margin:16px auto 0"></div>
+      <h2>How We Work</h2>
+    </div>
+    <div class="principles-grid">
+      <div class="principle-card fade-up"><div class="principle-num">01</div><div><h3>Fiduciary First</h3><p>We are legally and ethically obligated to act in your best interest. No conflicts of interest. No hidden commissions.</p></div></div>
+      <div class="principle-card fade-up fade-up-d1"><div class="principle-num">02</div><div><h3>Evidence-Based</h3><p>Every recommendation is grounded in academic research and data—not market noise or speculation.</p></div></div>
+      <div class="principle-card fade-up fade-up-d2"><div class="principle-num">03</div><div><h3>Values-Integrated</h3><p>Ethics are not a filter we apply at the end. They are woven into every layer of your portfolio construction.</p></div></div>
+      <div class="principle-card fade-up fade-up-d3"><div class="principle-num">04</div><div><h3>Deeply Personal</h3><p>No two clients are alike. We build every plan from scratch around your unique circumstances, goals, and values.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band section-pad" data-screen-label="CTA">
+  <div class="cta-band-bg"></div>
+  <div class="cta-inner">
+    <div class="eyebrow fade-up" style="display:block;margin-bottom:16px">Begin Your Journey</div>
+    <h2 class="fade-up fade-up-d1">Ready to Align Your<br>Wealth with Your Values?</h2>
+    <p class="fade-up fade-up-d2">Schedule a no-obligation consultation with the team. We'll listen first, then build a plan that's truly yours.</p>
+    <a href="contact.html" class="btn-primary fade-up fade-up-d2">Request a Consultation</a>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-main">
+    <div class="footer-brand"><img src="https://static.wixstatic.com/media/12ea13_1bd8c24ed6064b38bd9b2aebd1a0d62a~mv2.png/v1/fill/w_532,h_176,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/SSWM%20Logo%202024%20KL%20horizontal%20A.png" alt="Sage Stone Wealth Management"><p>Ethical wealth management for high net worth individuals, rooted in values, guided by expertise.</p><div class="footer-contact"><a href="tel:8584126404">858-412-6404</a><a href="/cdn-cgi/l/email-protection#e980878f86a99a888e8c9a9d86878c9e8c88859d81c78a8684"><span class="__cf_email__" data-cfemail="d4bdbab2bb94a7b5b3b1a7a0bbbab1a3b1b5b8a0bcfab7bbb9">[email&#160;protected]</span></a><a>7946 Ivanhoe Ave, Suite 316, La Jolla, CA 92037</a></div></div>
+    <div class="footer-col"><h4>Navigate</h4><ul><li><a href="philosophy.html">Our Philosophy</a></li><li><a href="services.html">Services</a></li><li><a href="team.html">The Team</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+    <div class="footer-col"><h4>Legal</h4><ul><li><a href="https://www.sagestonewealth.com/_files/ugd/12ea13_fbe9e38283784ffa8f228376956548c7.pdf" target="_blank">Form CRS</a></li><li><a href="https://adviserinfo.sec.gov/firm/summary/155477" target="_blank">SEC IAPD</a></li></ul></div>
+  </div>
+  <div class="footer-bottom"><p>© 2025 Sage Stone Wealth Management. SEC Registered Investment Adviser. This website is provided solely for informational purposes and is not intended as investment advice. Investing involves risk, including possible loss of principal.</p></div>
+</footer>
+<style>
+#tweaks-panel {
+  display:none; position:fixed; bottom:24px; right:24px; z-index:999;
+  background:#fff; border:1px solid #ddd; border-radius:4px; padding:24px 28px; width:292px;
+  box-shadow:0 12px 48px rgba(0,0,0,0.15); font-family:var(--font-sans);
+}
+#tweaks-panel h4 { font-size:13px; font-weight:600; color:#111; margin-bottom:20px; }
+.tweak-row { display:flex; align-items:center; justify-content:space-between; margin-bottom:16px; gap:12px; }
+.tweak-row label { font-size:12px; color:#555; font-weight:500; white-space:nowrap; min-width:110px; }
+.tweak-row input[type=range] { flex:1; accent-color:var(--gold); }
+.tweak-row input[type=color] { width:36px; height:28px; border:1px solid #ddd; border-radius:2px; cursor:pointer; padding:2px; }
+</style>
+
+<div id="tweaks-panel">
+  <h4>Tweaks</h4>
+  <div class="tweak-row">
+    <label>Nav Color</label>
+    <input type="color" id="tweak-nav" value="#12121e">
+  </div>
+  <div class="tweak-row">
+    <label>Accent Color</label>
+    <input type="color" id="tweak-gold" value="#C5963A">
+  </div>
+  <div class="tweak-row">
+    <label>Concern Cards</label>
+    <select id="tweak-cards" style="font-size:11px;padding:5px 8px;border:1px solid #ddd;border-radius:2px;background:#fff;flex:1">
+      <option value="dark">Dark (charcoal)</option>
+      <option value="medium">Medium gray</option>
+      <option value="light">Light silver</option>
+    </select>
+  </div>
+</div>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+const nav = document.getElementById('main-nav');
+window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 40));
+const io = new IntersectionObserver(entries => entries.forEach(e => { if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target);} }), {threshold:0.1});
+document.querySelectorAll('.fade-up').forEach(el => io.observe(el));
+
+const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
+  "nav": "#12121e",
+  "gold": "#C5963A",
+  "cards": "dark"
+}/*EDITMODE-END*/;
+
+const cardsBg = { dark: 'var(--charcoal)', medium: 'oklch(0.30 0.008 260)', light: 'oklch(0.55 0.006 260)' };
+const cardsText = { dark: 'var(--white)', medium: 'var(--white)', light: 'var(--white)' };
+
+function applyTweaks(t) {
+  document.documentElement.style.setProperty('--gold', t.gold);
+  document.getElementById('main-nav').style.background = t.nav;
+  const bg = cardsBg[t.cards] || cardsBg.dark;
+  document.querySelectorAll('.concerns-section').forEach(s => s.style.background = bg);
+}
+
+let tweaks = {...TWEAK_DEFAULTS};
+applyTweaks(tweaks);
+
+document.getElementById('tweak-nav').addEventListener('input', e => {
+  tweaks.nav = e.target.value; applyTweaks(tweaks);
+  window.parent.postMessage({type:'__edit_mode_set_keys', edits:{nav: tweaks.nav}}, '*');
+});
+document.getElementById('tweak-gold').addEventListener('input', e => {
+  tweaks.gold = e.target.value; applyTweaks(tweaks);
+  window.parent.postMessage({type:'__edit_mode_set_keys', edits:{gold: tweaks.gold}}, '*');
+});
+document.getElementById('tweak-cards').addEventListener('change', e => {
+  tweaks.cards = e.target.value; applyTweaks(tweaks);
+  window.parent.postMessage({type:'__edit_mode_set_keys', edits:{cards: tweaks.cards}}, '*');
+});
+
+window.addEventListener('message', e => {
+  if (e.data?.type === '__activate_edit_mode')   document.getElementById('tweaks-panel').style.display = 'block';
+  if (e.data?.type === '__deactivate_edit_mode') document.getElementById('tweaks-panel').style.display = 'none';
+});
+window.parent.postMessage({type:'__edit_mode_available'}, '*');
+</script>
+</body>
+</html>

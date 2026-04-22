@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Services | Sage Stone Wealth Management</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="sswm-silver.css">
+<style>
+.services-intro { background: var(--white); }
+.services-intro-grid { display: grid; grid-template-columns: 1fr 1.8fr; gap: 96px; align-items: start; }
+.services-intro-left h2 { font-family: var(--font-serif); font-size: clamp(28px, 2.8vw, 40px); font-weight: 500; line-height: 1.2; color: var(--ink); margin-top: 16px; margin-bottom: 20px; }
+.services-intro-left p { font-size: 15px; line-height: 1.85; color: var(--ink-mid); }
+.service-blocks { display: flex; flex-direction: column; gap: 2px; }
+.service-block { background: var(--silver-faint); display: grid; grid-template-columns: 80px 1fr; gap: 0; transition: background 0.2s; }
+.service-block:hover { background: var(--gold-pale); }
+.service-block-num { background: var(--charcoal); display: flex; align-items: flex-start; justify-content: center; padding-top: 40px; font-family: var(--font-serif); font-size: 18px; font-weight: 600; color: var(--gold); letter-spacing: 0.04em; }
+.service-block-body { padding: 36px 40px; border-left: 1px solid var(--silver-light); }
+.service-block-body h3 { font-family: var(--font-serif); font-size: 22px; font-weight: 500; color: var(--ink); margin-bottom: 12px; }
+.service-block-body p { font-size: 14.5px; line-height: 1.85; color: var(--ink-mid); margin-bottom: 12px; }
+.service-block-body ul { list-style: none; display: flex; flex-direction: column; gap: 8px; margin-top: 16px; }
+.service-block-body li { font-size: 13.5px; color: var(--ink-mid); padding-left: 18px; position: relative; line-height: 1.5; }
+.service-block-body li::before { content:''; position:absolute; left:0; top:9px; width:6px; height:1px; background:var(--gold); }
+
+.serve { background: var(--charcoal); }
+.serve-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: rgba(255,255,255,0.05); margin-top: 64px; }
+.serve-card { background: var(--charcoal-md); padding: 44px 36px; border-bottom: 2px solid transparent; transition: border-color 0.2s, background 0.2s; }
+.serve-card:hover { background: var(--charcoal-lt); border-bottom-color: var(--gold); }
+.serve-card h3 { font-family: var(--font-serif); font-size: 22px; font-weight: 500; color: var(--white); margin-bottom: 12px; }
+.serve-card p { font-size: 14px; line-height: 1.8; color: rgba(255,255,255,0.47); }
+.serve-header { text-align: center; }
+.serve-header h2 { font-family: var(--font-serif); font-size: clamp(28px, 3vw, 42px); font-weight: 500; color: var(--white); margin-top: 16px; }
+.serve-header p { font-size: 16px; color: rgba(255,255,255,0.5); margin-top: 14px; max-width: 500px; margin-inline: auto; line-height: 1.75; }
+</style>
+</head>
+<body>
+<nav id="main-nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo"><img src="https://static.wixstatic.com/media/12ea13_1bd8c24ed6064b38bd9b2aebd1a0d62a~mv2.png/v1/fill/w_532,h_176,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/SSWM%20Logo%202024%20KL%20horizontal%20A.png" alt="Sage Stone Wealth Management"></a>
+    <div class="nav-links">
+      <a href="philosophy.html">Our Philosophy</a>
+      <a href="services.html" class="active">Services</a>
+      <a href="team.html">The Team</a>
+      <a href="contact.html">Contact</a>
+      <a href="contact.html" class="nav-cta">Request a Consult</a>
+    </div>
+  </div>
+</nav>
+
+<div class="page-hero" data-screen-label="Page Hero">
+  <div class="container page-hero-inner">
+    <span class="eyebrow">Services</span>
+    <h1>Comprehensive<br><em>Wealth Management</em></h1>
+    <p>Every service we offer is built around your goals, your values, and the financial future you envision.</p>
+  </div>
+</div>
+
+<section class="services-intro section-pad" data-screen-label="Services">
+  <div class="container">
+    <div class="services-intro-grid">
+      <div class="services-intro-left fade-up">
+        <div class="eyebrow">What We Do</div>
+        <div class="gold-rule" style="margin-top:16px"></div>
+        <h2>A Full Spectrum of Expertise</h2>
+        <p>We address the complete landscape of wealth management—from ethical portfolio construction to retirement income planning to global macro strategy.</p>
+        <p style="margin-top:14px">Every engagement starts with listening. We understand your full financial picture before we recommend a single investment.</p>
+        <a href="contact.html" class="btn-dark" style="margin-top:28px;display:inline-block">Start a Conversation</a>
+      </div>
+      <div class="service-blocks fade-up fade-up-d1">
+        <div class="service-block"><div class="service-block-num">01</div><div class="service-block-body"><h3>Ethical Investment Management</h3><p>Portfolios built around your values and financial goals. We apply rigorous ethical screening—ESG, faith-based, or values-driven criteria—without compromising performance.</p><ul><li>Environmental, Social & Governance (ESG) screening</li><li>Faith-based investment criteria</li><li>Custom values-aligned portfolio construction</li><li>Academic-backed methodology pioneered in 2002</li></ul></div></div>
+        <div class="service-block"><div class="service-block-num">02</div><div class="service-block-body"><h3>Retirement & Income Planning</h3><p>We model your lifetime income needs and structure your assets so your principal is protected and your lifestyle is preserved—through market downturns and beyond.</p><ul><li>Lifetime income modeling</li><li>Principal protection strategies</li><li>Distribution planning and sequencing</li><li>Retirement lifestyle continuity analysis</li></ul></div></div>
+        <div class="service-block"><div class="service-block-num">03</div><div class="service-block-body"><h3>Global Macro Strategy</h3><p>Your portfolio accounts for today's geopolitical and economic realities. We integrate global macro trends so you are positioned to flourish—not just survive—market disruptions.</p><ul><li>Geopolitical risk integration</li><li>International diversification</li><li>Economic cycle positioning</li><li>Currency and commodity exposure management</li></ul></div></div>
+        <div class="service-block"><div class="service-block-num">04</div><div class="service-block-body"><h3>Financial Planning & Advisory</h3><p>Beyond investments, we serve as a trusted financial guide across all major life decisions—from estate planning considerations to major asset transitions.</p><ul><li>Comprehensive financial plan development</li><li>Estate and legacy planning coordination</li><li>Nonprofit and institutional portfolio guidance</li><li>Ongoing advisory and portfolio review</li></ul></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="serve section-pad" data-screen-label="Who We Serve">
+  <div class="container">
+    <div class="serve-header fade-up">
+      <div class="eyebrow">Who We Serve</div>
+      <h2>Built for Complex Needs</h2>
+      <p>We specialize in clients who require more than a cookie-cutter portfolio.</p>
+    </div>
+    <div class="serve-grid">
+      <div class="serve-card fade-up"><h3>High Net Worth Individuals</h3><p>Executives, entrepreneurs, and professionals who have built significant wealth and need disciplined stewardship of it.</p></div>
+      <div class="serve-card fade-up fade-up-d1"><h3>Values-Driven Investors</h3><p>Individuals and families whose faith, ethics, or worldview must be reflected in their portfolio—without sacrificing returns.</p></div>
+      <div class="serve-card fade-up fade-up-d2"><h3>Nonprofits & Institutions</h3><p>Mission-driven organizations that require investment management aligned with their purpose and governance standards.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band section-pad" data-screen-label="CTA">
+  <div class="cta-band-bg"></div>
+  <div class="cta-inner">
+    <div class="eyebrow fade-up" style="display:block;margin-bottom:16px">Get Started</div>
+    <h2 class="fade-up fade-up-d1">Let's Build Your<br>Personal Plan</h2>
+    <p class="fade-up fade-up-d2">Schedule a no-obligation consultation with the team. Every engagement starts with listening.</p>
+    <a href="contact.html" class="btn-primary fade-up fade-up-d2">Request a Consultation</a>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-main">
+    <div class="footer-brand"><img src="https://static.wixstatic.com/media/12ea13_1bd8c24ed6064b38bd9b2aebd1a0d62a~mv2.png/v1/fill/w_532,h_176,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/SSWM%20Logo%202024%20KL%20horizontal%20A.png" alt="Sage Stone Wealth Management"><p>Ethical wealth management for high net worth individuals, rooted in values, guided by expertise.</p><div class="footer-contact"><a href="tel:8584126404">858-412-6404</a><a href="/cdn-cgi/l/email-protection#0861666e67487b696f6d7b7c67666d7f6d69647c60266b6765"><span class="__cf_email__" data-cfemail="80e9eee6efc0f3e1e7e5f3f4efeee5f7e5e1ecf4e8aee3efed">[email&#160;protected]</span></a><a>7946 Ivanhoe Ave, Suite 316, La Jolla, CA 92037</a></div></div>
+    <div class="footer-col"><h4>Navigate</h4><ul><li><a href="philosophy.html">Our Philosophy</a></li><li><a href="services.html">Services</a></li><li><a href="team.html">The Team</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+    <div class="footer-col"><h4>Legal</h4><ul><li><a href="https://www.sagestonewealth.com/_files/ugd/12ea13_fbe9e38283784ffa8f228376956548c7.pdf" target="_blank">Form CRS</a></li><li><a href="https://adviserinfo.sec.gov/firm/summary/155477" target="_blank">SEC IAPD</a></li></ul></div>
+  </div>
+  <div class="footer-bottom"><p>© 2025 Sage Stone Wealth Management. SEC Registered Investment Adviser. This website is provided solely for informational purposes and is not intended as investment advice. Investing involves risk, including possible loss of principal.</p></div>
+</footer>
+<style>
+#tweaks-panel {
+  display:none; position:fixed; bottom:24px; right:24px; z-index:999;
+  background:#fff; border:1px solid #ddd; border-radius:4px; padding:24px 28px; width:292px;
+  box-shadow:0 12px 48px rgba(0,0,0,0.15); font-family:var(--font-sans);
+}
+#tweaks-panel h4 { font-size:13px; font-weight:600; color:#111; margin-bottom:20px; }
+.tweak-row { display:flex; align-items:center; justify-content:space-between; margin-bottom:16px; gap:12px; }
+.tweak-row label { font-size:12px; color:#555; font-weight:500; white-space:nowrap; min-width:110px; }
+.tweak-row input[type=range] { flex:1; accent-color:var(--gold); }
+.tweak-row input[type=color] { width:36px; height:28px; border:1px solid #ddd; border-radius:2px; cursor:pointer; padding:2px; }
+.tweak-val { font-size:11px; color:#999; width:28px; text-align:right; }
+</style>
+
+<div id="tweaks-panel">
+  <h4>Tweaks</h4>
+  <div class="tweak-row">
+    <label>Nav Color</label>
+    <input type="color" id="tweak-nav" value="#12121e">
+  </div>
+  <div class="tweak-row">
+    <label>Accent Color</label>
+    <input type="color" id="tweak-gold" value="#C5963A">
+  </div>
+  <div class="tweak-row">
+    <label>Service Block BG</label>
+    <select id="tweak-blocks" style="font-size:11px;padding:5px 8px;border:1px solid #ddd;border-radius:2px;background:#fff;flex:1">
+      <option value="faint">Light silver</option>
+      <option value="white">Pure white</option>
+      <option value="gold">Gold tint</option>
+    </select>
+  </div>
+</div>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+const nav = document.getElementById('main-nav');
+window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 40));
+const io = new IntersectionObserver(entries => entries.forEach(e => { if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target);} }), {threshold:0.1});
+document.querySelectorAll('.fade-up').forEach(el => io.observe(el));
+
+const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
+  "nav": "#12121e",
+  "gold": "#C5963A",
+  "blocks": "faint"
+}/*EDITMODE-END*/;
+
+const blocksBg = { faint: 'var(--silver-faint)', white: '#ffffff', gold: 'var(--gold-pale)' };
+
+function applyTweaks(t) {
+  document.documentElement.style.setProperty('--gold', t.gold);
+  document.getElementById('main-nav').style.background = t.nav;
+  const bg = blocksBg[t.blocks] || blocksBg.faint;
+  document.querySelectorAll('.service-block').forEach(b => b.style.background = bg);
+}
+
+let tweaks = {...TWEAK_DEFAULTS};
+applyTweaks(tweaks);
+
+document.getElementById('tweak-nav').addEventListener('input', e => {
+  tweaks.nav = e.target.value; applyTweaks(tweaks);
+  window.parent.postMessage({type:'__edit_mode_set_keys', edits:{nav: tweaks.nav}}, '*');
+});
+document.getElementById('tweak-gold').addEventListener('input', e => {
+  tweaks.gold = e.target.value; applyTweaks(tweaks);
+  window.parent.postMessage({type:'__edit_mode_set_keys', edits:{gold: tweaks.gold}}, '*');
+});
+document.getElementById('tweak-blocks').addEventListener('change', e => {
+  tweaks.blocks = e.target.value; applyTweaks(tweaks);
+  window.parent.postMessage({type:'__edit_mode_set_keys', edits:{blocks: tweaks.blocks}}, '*');
+});
+
+window.addEventListener('message', e => {
+  if (e.data?.type === '__activate_edit_mode')   document.getElementById('tweaks-panel').style.display = 'block';
+  if (e.data?.type === '__deactivate_edit_mode') document.getElementById('tweaks-panel').style.display = 'none';
+});
+window.parent.postMessage({type:'__edit_mode_available'}, '*');
+</script>
+</body>
+</html>

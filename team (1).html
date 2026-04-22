@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Team | Sage Stone Wealth Management</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="sswm-silver.css">
+<style>
+.bio-section { background: var(--white); }
+.bio-block { display: grid; grid-template-columns: 380px 1fr; gap: 72px; align-items: start; padding: 80px 0; border-bottom: 1px solid var(--silver-light); }
+.bio-block:first-child { padding-top: 0; }
+.bio-block:last-child { border-bottom: none; }
+.bio-block.reverse { grid-template-columns: 1fr 380px; }
+.bio-block.reverse .bio-photo { order: 2; }
+.bio-block.reverse .bio-text { order: 1; }
+.bio-photo { position: relative; }
+.bio-photo-img { width: 100%; aspect-ratio: 3/4; object-fit: cover; object-position: top; border-radius: 1px; background: var(--silver-pale); display: block; }
+.bio-badge { position: absolute; bottom: -16px; left: 24px; background: var(--gold); color: var(--charcoal); font-size: 10px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; padding: 10px 18px; border-radius: 1px; box-shadow: 0 4px 20px rgba(0,0,0,0.12); }
+.bio-text { padding-top: 4px; }
+.bio-name { font-family: var(--font-serif); font-size: clamp(32px, 3vw, 46px); font-weight: 500; color: var(--ink); margin-bottom: 4px; margin-top: 16px; }
+.bio-title { font-size: 12px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--silver); margin-bottom: 28px; }
+.bio-body p { font-size: 15.5px; line-height: 1.85; color: var(--ink-mid); margin-bottom: 16px; }
+.bio-body p strong { color: var(--ink); font-weight: 600; }
+.bio-creds { margin-top: 28px; padding-top: 28px; border-top: 1px solid var(--silver-light); display: flex; flex-direction: column; gap: 10px; }
+.bio-cred { display: flex; align-items: flex-start; gap: 12px; font-size: 13.5px; color: var(--ink-mid); line-height: 1.5; }
+.bio-cred::before { content: ''; flex-shrink: 0; width: 20px; height: 1px; background: var(--gold); margin-top: 10px; }
+.five-star { display: inline-flex; align-items: center; gap: 8px; margin-top: 20px; background: oklch(0.97 0.02 85); border: 1px solid oklch(0.88 0.05 85); padding: 10px 18px; border-radius: 1px; font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold-deep); }
+.linkedin-link { display: inline-flex; align-items: center; gap: 8px; margin-top: 16px; font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--silver); transition: color 0.2s; }
+.linkedin-link:hover { color: var(--charcoal); }
+.linkedin-link svg { width: 16px; height: 16px; fill: currentColor; }
+
+.team-more { background: var(--silver-pale); }
+.team-more-header { text-align: center; margin-bottom: 56px; }
+.team-more-header h2 { font-family: var(--font-serif); font-size: clamp(26px, 2.8vw, 38px); font-weight: 500; color: var(--ink); margin-top: 16px; }
+.team-more-header p { font-size: 15px; color: var(--ink-mid); margin-top: 12px; max-width: 480px; margin-inline: auto; line-height: 1.75; }
+.team-grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2px; background: var(--silver-light); max-width: 800px; margin: 0 auto; }
+.team-card { background: var(--white); overflow: hidden; transition: box-shadow 0.2s; }
+.team-card:hover { box-shadow: 0 8px 40px rgba(0,0,0,0.08); }
+.team-card-photo { aspect-ratio: 1/1; background: var(--silver-pale); overflow: hidden; position: relative; }
+.team-card-photo img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
+.team-card-photo-label { position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, rgba(0,0,0,0.6), transparent); padding: 20px 16px 12px; font-size: 9px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.5); }
+.team-card-body { padding: 24px 24px 28px; }
+.team-card-name { font-family: var(--font-serif); font-size: 20px; font-weight: 500; color: var(--ink); margin-bottom: 4px; }
+.team-card-title { font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--silver); margin-bottom: 12px; }
+.team-card-body p { font-size: 13px; line-height: 1.75; color: var(--ink-mid); }
+
+.awards { background: var(--charcoal); padding: 72px 0; }
+.awards-inner { max-width: 1200px; margin: 0 auto; padding: 0 48px; display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: center; }
+.awards-text h2 { font-family: var(--font-serif); font-size: clamp(26px, 2.8vw, 38px); font-weight: 500; color: var(--white); margin-top: 16px; margin-bottom: 20px; }
+.awards-text p { font-size: 15px; line-height: 1.8; color: rgba(255,255,255,0.5); }
+.awards-years { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 28px; }
+.award-year { background: var(--charcoal-lt); border: 1px solid rgba(255,255,255,0.1); color: var(--gold); font-size: 12px; font-weight: 600; letter-spacing: 0.08em; padding: 8px 14px; border-radius: 1px; }
+.awards-badge-side { display: flex; align-items: center; justify-content: center; }
+.awards-badge-side img { max-width: 260px; border-radius: 1px; }
+</style>
+</head>
+<body>
+<nav id="main-nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo"><img src="https://static.wixstatic.com/media/12ea13_1bd8c24ed6064b38bd9b2aebd1a0d62a~mv2.png/v1/fill/w_532,h_176,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/SSWM%20Logo%202024%20KL%20horizontal%20A.png" alt="Sage Stone Wealth Management"></a>
+    <div class="nav-links">
+      <a href="philosophy.html">Our Philosophy</a>
+      <a href="services.html">Services</a>
+      <a href="team.html" class="active">The Team</a>
+      <a href="contact.html">Contact</a>
+      <a href="contact.html" class="nav-cta">Request a Consult</a>
+    </div>
+  </div>
+</nav>
+
+<div class="page-hero" data-screen-label="Page Hero">
+  <div class="container page-hero-inner">
+    <span class="eyebrow">Leadership</span>
+    <h1>Meet the<br><em>Sage Stone Team</em></h1>
+    <p>A dedicated team of experienced professionals committed to your long-term financial success.</p>
+  </div>
+</div>
+
+<section class="bio-section section-pad" data-screen-label="Leadership Bios">
+  <div class="container">
+    <div class="bio-block fade-up">
+      <div class="bio-photo">
+        <img class="bio-photo-img" src="https://static.wixstatic.com/media/12ea13_76c73ce78876449c9b6dab092b041fdc~mv2.jpg/v1/fill/w_760,h_1000,al_c,q_80,usm_0.66_1.00_0.01/12ea13_76c73ce78876449c9b6dab092b041fdc~mv2.jpg" alt="Mary Naber" onerror="this.style.display='none'">
+        <div class="bio-badge">Founder & President</div>
+      </div>
+      <div class="bio-text">
+        <div class="eyebrow">Leadership</div>
+        <div class="gold-rule" style="margin-top:14px"></div>
+        <div class="bio-name">Mary Naber</div>
+        <div class="bio-title">Founder &amp; President</div>
+        <div class="bio-body">
+          <p>Mary Naber is the driving force behind Sage Stone Wealth Management and one of the country's foremost authorities on ethical investing. With over two decades of experience managing wealth for high-net-worth clients, she has built her practice on a simple belief: <strong>you should never have to choose between your values and your financial security.</strong></p>
+          <p>Mary was the first researcher to publish academic work integrating faith and investing in the <strong>Journal of Investing</strong>, a landmark contribution that helped define the field of values-aligned portfolio management as it exists today.</p>
+          <p>Prior to founding Sage Stone, Mary served as Senior Vice President of Investments at Merrill Lynch's Beverly Hills office. She is a nationally renowned speaker, and her work has been referenced in multiple books and publications.</p>
+        </div>
+        <div class="bio-creds">
+          <div class="bio-cred">Harvard College, Cum Laude — Economics &amp; Religion</div>
+          <div class="bio-cred">Former Senior VP–Investments, Merrill Lynch, Beverly Hills</div>
+          <div class="bio-cred">Published academic researcher, Journal of Investing</div>
+          <div class="bio-cred">Nationally recognized speaker and author</div>
+        </div>
+        <div class="five-star">★ Five Star Wealth Manager — 10 Consecutive Years (2016–2025)</div><br>
+        <a class="linkedin-link" href="https://www.linkedin.com/in/mary-naber-a0699b38/" target="_blank"><svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>LinkedIn Profile</a>
+      </div>
+    </div>
+
+    <div class="bio-block reverse fade-up fade-up-d1">
+      <div class="bio-photo">
+        <img class="bio-photo-img" src="https://static.wixstatic.com/media/12ea13_13317a1b02e2474ba9c9f643ae0d3349~mv2.jpg/v1/fill/w_760,h_1000,al_c,q_80,usm_0.66_1.00_0.01/12ea13_13317a1b02e2474ba9c9f643ae0d3349~mv2.jpg" alt="Michael Lopez" onerror="this.style.display='none'">
+        <div class="bio-badge">Vice President</div>
+      </div>
+      <div class="bio-text">
+        <div class="eyebrow">Leadership</div>
+        <div class="gold-rule" style="margin-top:14px"></div>
+        <div class="bio-name">Michael Lopez</div>
+        <div class="bio-title">Vice President</div>
+        <div class="bio-body">
+          <p>Michael Lopez brings a rare combination of global financial expertise and deep analytical rigor to Sage Stone's client work. Trained at Harvard and the University of Melbourne, he specializes in translating complex macroeconomic realities into clear, actionable investment strategies.</p>
+          <p>Michael's career spans senior roles across financial advisory, analytics, and accounting. He served as a <strong>Financial Management Consultant to Charter Mason</strong> in Melbourne, a <strong>Senior Financial Analyst at Kaiser Permanente</strong>, and held roles at Arthur Andersen. He also served as a <strong>Financial Advisor at Merrill Lynch</strong> in the San Francisco area.</p>
+        </div>
+        <div class="bio-creds">
+          <div class="bio-cred">Harvard University — Economics</div>
+          <div class="bio-cred">Masters of Applied Finance, University of Melbourne</div>
+          <div class="bio-cred">Former Financial Management Consultant, Charter Mason, Melbourne</div>
+          <div class="bio-cred">Former Senior Financial Analyst, Kaiser Permanente</div>
+          <div class="bio-cred">Former Financial Advisor, Merrill Lynch, San Francisco</div>
+        </div>
+        <div class="five-star">★ Five Star Wealth Manager</div><br>
+        <a class="linkedin-link" href="https://www.linkedin.com/in/michael-lopez-009/" target="_blank"><svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>LinkedIn Profile</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="awards" data-screen-label="Awards">
+  <div class="awards-inner">
+    <div class="awards-text fade-up">
+      <div class="eyebrow">Recognition</div>
+      <h2>Five Star Wealth Manager — 10 Consecutive Years</h2>
+      <p>Mary Naber has been named a Five Star Wealth Manager every year since 2016—awarded to fewer than 7% of wealth managers in the San Diego area.</p>
+      <div class="awards-years">
+        <div class="award-year">2016</div><div class="award-year">2017</div><div class="award-year">2018</div><div class="award-year">2019</div><div class="award-year">2020</div><div class="award-year">2021</div><div class="award-year">2022</div><div class="award-year">2023</div><div class="award-year">2024</div><div class="award-year">2025</div>
+      </div>
+    </div>
+    <div class="awards-badge-side fade-up fade-up-d1">
+      <img src="https://static.wixstatic.com/media/12ea13_d80ca366162a470b922415fed6dd7b69~mv2.jpg/v1/fill/w_556,h_218,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/SDWM25_MaryNaber_43475_1%20(1)_edited.jpg" alt="2025 Five Star Wealth Manager Award" onerror="this.style.display='none'">
+    </div>
+  </div>
+</section>
+
+<section class="team-more section-pad" data-screen-label="Additional Team">
+  <div class="container">
+    <div class="team-more-header fade-up">
+      <div class="eyebrow">Our Team</div>
+      <div class="gold-rule" style="margin:16px auto 0"></div>
+      <h2>Supporting Our Clients</h2>
+      <p>Behind our founders is a dedicated team committed to delivering the Sage Stone standard of service.</p>
+    </div>
+    <div class="team-grid-2">
+      <div class="team-card fade-up">
+        <div class="team-card-photo">
+          <img src="https://static.wixstatic.com/media/12ea13_cf3444eef60e41b4924743ebe8fa82d3~mv2.jpg/v1/crop/x_86,y_0,w_4959,h_6429/fill/w_403,h_576,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/ethan-1.jpg" alt="Ethan Senn" onerror="this.style.display='none'">
+          <div class="team-card-photo-label">Investment Consultant</div>
+        </div>
+        <div class="team-card-body">
+          <div class="team-card-name">Ethan Senn</div>
+          <div class="team-card-title">Investment Consultant</div>
+          <p>Ethan specializes in developing and reviewing clients' financial plans. Magna Cum Laude BBA in Finance, University of San Diego. Second Lieutenant, U.S. Army Reserve.</p>
+          <a class="linkedin-link" href="https://www.linkedin.com/in/ethan-senn/" target="_blank" style="margin-top:14px"><svg viewBox="0 0 24 24" style="width:14px;height:14px;fill:currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>LinkedIn</a>
+        </div>
+      </div>
+      <div class="team-card fade-up fade-up-d1">
+        <div class="team-card-photo">
+          <img src="https://static.wixstatic.com/media/12ea13_2bbd346aad73471f9626f9a082c462ba~mv2.jpg/v1/fill/w_403,h_576,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Becca-2.jpg" alt="Becca Parsons" onerror="this.style.display='none'">
+          <div class="team-card-photo-label">Client Services</div>
+        </div>
+        <div class="team-card-body">
+          <div class="team-card-name">Becca Parsons</div>
+          <div class="team-card-title">Client Services Specialist</div>
+          <p>Becca manages day-to-day operations including new account setup, client forms, money transfers, and account maintenance—ensuring seamless service for every client.</p>
+          <a class="linkedin-link" href="https://www.linkedin.com/in/becca-parsons-299120317/" target="_blank" style="margin-top:14px"><svg viewBox="0 0 24 24" style="width:14px;height:14px;fill:currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>LinkedIn</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="pedigree"><div class="pedigree-inner"><h3>Our leadership has proudly served</h3><div class="pedigree-logos"><div class="logo-pill">Merrill Lynch</div><div class="logo-pill">Kaiser Permanente</div><div class="logo-pill">Arthur Andersen</div></div></div></div>
+
+<section class="cta-band section-pad" data-screen-label="CTA">
+  <div class="cta-band-bg"></div>
+  <div class="cta-inner">
+    <div class="eyebrow fade-up" style="display:block;margin-bottom:16px">Work With Us</div>
+    <h2 class="fade-up fade-up-d1">Ready to Work<br>With Our Team?</h2>
+    <p class="fade-up fade-up-d2">Schedule a no-obligation consultation. We'll listen first, then build a plan that's truly yours.</p>
+    <a href="contact.html" class="btn-primary fade-up fade-up-d2">Request a Consultation</a>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-main">
+    <div class="footer-brand"><img src="https://static.wixstatic.com/media/12ea13_1bd8c24ed6064b38bd9b2aebd1a0d62a~mv2.png/v1/fill/w_532,h_176,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/SSWM%20Logo%202024%20KL%20horizontal%20A.png" alt="Sage Stone Wealth Management"><p>Ethical wealth management for high net worth individuals, rooted in values, guided by expertise.</p><div class="footer-contact"><a href="tel:8584126404">858-412-6404</a><a href="/cdn-cgi/l/email-protection#c7aea9a1a887b4a6a0a2b4b3a8a9a2b0a2a6abb3afe9a4a8aa"><span class="__cf_email__" data-cfemail="c8a1a6aea788bba9afadbbbca7a6adbfada9a4bca0e6aba7a5">[email&#160;protected]</span></a><a>7946 Ivanhoe Ave, Suite 316, La Jolla, CA 92037</a></div></div>
+    <div class="footer-col"><h4>Navigate</h4><ul><li><a href="philosophy.html">Our Philosophy</a></li><li><a href="services.html">Services</a></li><li><a href="team.html">The Team</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+    <div class="footer-col"><h4>Legal</h4><ul><li><a href="https://www.sagestonewealth.com/_files/ugd/12ea13_fbe9e38283784ffa8f228376956548c7.pdf" target="_blank">Form CRS</a></li><li><a href="https://adviserinfo.sec.gov/firm/summary/155477" target="_blank">SEC IAPD</a></li></ul></div>
+  </div>
+  <div class="footer-bottom"><p>© 2025 Sage Stone Wealth Management. SEC Registered Investment Adviser. This website is provided solely for informational purposes and is not intended as investment advice. Investing involves risk, including possible loss of principal.</p></div>
+</footer>
+<style>
+#tweaks-panel {
+  display:none; position:fixed; bottom:24px; right:24px; z-index:999;
+  background:#fff; border:1px solid #ddd; border-radius:4px; padding:24px 28px; width:292px;
+  box-shadow:0 12px 48px rgba(0,0,0,0.15); font-family:var(--font-sans);
+}
+#tweaks-panel h4 { font-size:13px; font-weight:600; color:#111; margin-bottom:20px; }
+.tweak-row { display:flex; align-items:center; justify-content:space-between; margin-bottom:16px; gap:12px; }
+.tweak-row label { font-size:12px; color:#555; font-weight:500; white-space:nowrap; min-width:110px; }
+.tweak-row input[type=range] { flex:1; accent-color:var(--gold); }
+.tweak-row input[type=color] { width:36px; height:28px; border:1px solid #ddd; border-radius:2px; cursor:pointer; padding:2px; }
+.tweak-val { font-size:11px; color:#999; width:28px; text-align:right; }
+</style>
+
+<div id="tweaks-panel">
+  <h4>Tweaks</h4>
+  <div class="tweak-row">
+    <label>Nav Color</label>
+    <input type="color" id="tweak-nav" value="#12121e">
+  </div>
+  <div class="tweak-row">
+    <label>Accent Color</label>
+    <input type="color" id="tweak-gold" value="#C5963A">
+  </div>
+  <div class="tweak-row">
+    <label>Photo Tint</label>
+    <input type="range" id="tweak-photo" min="0" max="100" value="0">
+    <span class="tweak-val" id="photo-val">0</span>
+  </div>
+  <div class="tweak-row">
+    <label>Awards Bg</label>
+    <select id="tweak-awards" style="font-size:11px;padding:5px 8px;border:1px solid #ddd;border-radius:2px;background:#fff;flex:1">
+      <option value="dark">Dark charcoal</option>
+      <option value="mid">Medium gray</option>
+      <option value="navy">Deep navy</option>
+    </select>
+  </div>
+</div>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+const nav = document.getElementById('main-nav');
+window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 40));
+const io = new IntersectionObserver(entries => entries.forEach(e => { if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target);} }), {threshold:0.1});
+document.querySelectorAll('.fade-up').forEach(el => io.observe(el));
+
+const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
+  "nav": "#12121e",
+  "gold": "#C5963A",
+  "photo": 0,
+  "awards": "dark"
+}/*EDITMODE-END*/;
+
+const awardsBg = { dark: 'var(--charcoal)', mid: 'oklch(0.28 0.008 260)', navy: 'oklch(0.18 0.04 260)' };
+
+function applyTweaks(t) {
+  document.documentElement.style.setProperty('--gold', t.gold);
+  document.getElementById('main-nav').style.background = t.nav;
+  document.getElementById('photo-val').textContent = t.photo;
+  // Apply a light silver overlay tint to bio photos
+  const tint = t.photo / 100;
+  document.querySelectorAll('.bio-photo-img, .team-card-photo img').forEach(img => {
+    img.style.filter = `brightness(${1 - tint * 0.35 + 0.01}) contrast(${1 - tint * 0.1})`;
+  });
+  document.querySelector('.awards').style.background = awardsBg[t.awards] || awardsBg.dark;
+}
+
+let tweaks = {...TWEAK_DEFAULTS};
+applyTweaks(tweaks);
+
+document.getElementById('tweak-nav').addEventListener('input', e => {
+  tweaks.nav = e.target.value; applyTweaks(tweaks);
+  window.parent.postMessage({type:'__edit_mode_set_keys', edits:{nav: tweaks.nav}}, '*');
+});
+document.getElementById('tweak-gold').addEventListener('input', e => {
+  tweaks.gold = e.target.value; applyTweaks(tweaks);
+  window.parent.postMessage({type:'__edit_mode_set_keys', edits:{gold: tweaks.gold}}, '*');
+});
+document.getElementById('tweak-photo').addEventListener('input', e => {
+  tweaks.photo = +e.target.value; applyTweaks(tweaks);
+  window.parent.postMessage({type:'__edit_mode_set_keys', edits:{photo: tweaks.photo}}, '*');
+});
+document.getElementById('tweak-awards').addEventListener('change', e => {
+  tweaks.awards = e.target.value; applyTweaks(tweaks);
+  window.parent.postMessage({type:'__edit_mode_set_keys', edits:{awards: tweaks.awards}}, '*');
+});
+
+window.addEventListener('message', e => {
+  if (e.data?.type === '__activate_edit_mode')   document.getElementById('tweaks-panel').style.display = 'block';
+  if (e.data?.type === '__deactivate_edit_mode') document.getElementById('tweaks-panel').style.display = 'none';
+});
+window.parent.postMessage({type:'__edit_mode_available'}, '*');
+</script>
+</body>
+</html>
